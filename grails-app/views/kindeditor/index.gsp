@@ -5,7 +5,8 @@
 <meta name="layout" content="main"/>
 <title>Insert title here, change the title in master mode</title>
 	<ke:resource></ke:resource>
-	
+	 
+	 <g:javascript>added in dev mod</g:javascript>
 	<script type="text/javascript">
 		KE.show({
 			id : 'content1',
