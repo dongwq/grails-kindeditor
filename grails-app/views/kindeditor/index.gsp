@@ -3,8 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="layout" content="main"/>
-<title>Insert title here, change the title in master mode</title>
+<title>Insert title here</title>
 	<ke:resource></ke:resource>
+	 
 	
 	<script type="text/javascript">
 		KE.show({
