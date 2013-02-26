@@ -49,19 +49,28 @@ class KindeditorTagLib {
 			jsFile = "kindeditor-min.js"
 		}
 		
-		def jsPath = g.resource(plugin:"kindeditor", dir:'', file:jsFile)
-		out <<"<link rel=\"stylesheet\" type=\"text/css\" href=\"$jsPath\" />"
-		out <<"<script type=\"text/javascript\" src=\"$jsPath\" /></script>"
+		def jsPath = g.resource(plugin:"kindeditor", dir:'ke-zh', file:jsFile)
+		
+		out <<"""<script type="text/javascript" src="${jsPath}" /></script>"""
 	}
 
+	def types = ["tiny", 'simple', 'all']
+		
 	def show = { attrs, body->
-		def id = attrs.remove("id")
+		
 		def type = attrs.remove("type")
+		//if type is not a exist one.
+		if( !types.contains(type)) type = 'simple'
+		
+		def id = attrs.remove("id")
+		def formId = attrs.remove("formId")
 		
 		def upload = "${request.contextPath}/kindeditor/upload"
 		def fileManager = "${request.contextPath}/kindeditor/fileManager"
 		
-		out<< render(  )
+		def keConfig = new KEConfig(id:id, type:type,formId:formId, uploadPath:upload, fileManagerPath:fileManager);
+		
+		out<< render(template:type,model:[keConfig:keConfig] )
 	}
 	
 	def doShow(def out){
