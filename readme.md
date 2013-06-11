@@ -1,11 +1,8 @@
-
-KindEditor(a good html editor) wrapped as Grails Plugin.
-=======================================================
-
-https://github.com/dongwq/kindeditor.git
+KindEditor For Grails.
+===================
 
 ##Usage
-this project wrapped KindEditor(a good html editor,http://www.kindsoft.net/) wrapped as Grails Plugin.
+this project wrapped KindEditor(a good html editor,http://www.kindsoft.net/) as a Grails Plugin.
 
 There is a Taglib helper named 'ke'.And give 3 type for 'all','simple','tiny' for some kinds of configs for KindEditor.
 
@@ -18,3 +15,4 @@ See the detail in keDemo.gsp file.
 ##Todo
 - support zh and en lang.
 - support config of upload dir
+- update ke to v 4.1.7
