@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 	
-	<script type="text/javascript">
+      <r:script>
 		KE.show({
 			id: "${keConfig.id}",
 			imageUploadJson : "${keConfig.uploadPath}",
@@ -18,4 +18,4 @@
 			}
 		});
 
-	</script>
+      </r:script>

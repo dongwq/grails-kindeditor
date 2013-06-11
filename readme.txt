@@ -1,23 +1,20 @@
 
-2011/04/29
-	回去完善几个模块的选择吧。命名：simple,  complex , all, 把例子中的整理几个模式出来给简化操作了要。
-	
+KindEditor(a good html editor) wrapped as Grails Plugin.
+=======================================================
 
-2011/05/19
+https://github.com/dongwq/kindeditor.git
 
-	提供中文与英文共存，可以根据local自动切换。
-	
-	
-	当然先把中文功能完善起来。
-	
+##Usage
+this project wrapped KindEditor(a good html editor,http://www.kindsoft.net/) wrapped as Grails Plugin.
 
-功能需求点：
-	1. 将文件夹命名ke-en与ke-zh	
-	
-	
-	
-	2. 仍需要改进地方:
-		a.上传位置可以相对项目，也可以到一个绝对位置.
-		b.
-		
-	3. 发布后可能存在问题：一上传路径？？
+There is a Taglib helper named 'ke'.And give 3 type for 'all','simple','tiny' for some kinds of configs for KindEditor.
+
+See the detail in keDemo.gsp file.
+
+##Change Log
+- v0.0.1@2011/04/29, created
+- v0.3.0@2013/06/11, try to upload to grails.org.
+
+##Todo
+- support zh and en lang.
+- support config of upload dir

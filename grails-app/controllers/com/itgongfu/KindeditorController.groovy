@@ -1,4 +1,4 @@
-package com.dong
+package com.itgongfu
 
 import grails.web.JSONBuilder
 
@@ -9,12 +9,11 @@ import org.springframework.web.multipart.MultipartFile
 
 class KindeditorController {
 
-	def index = {
-
+	def keDemo(){
 		return [htmlData:params.content1]
 	}
 
-	def upload = {
+	def upload(){
 		
 		def name = "imgFile"   /*由kindeditor内部使用这个名称*/
 		//
@@ -115,7 +114,7 @@ class KindeditorController {
 		return """{"error":0, "url":"$path"}"""
 	}
 	
-	def fileManager ={
+	def fileManager(){
 		
 		def rootPath = servletContext.getRealPath("/") + "attached/"
 		def rootUrl = request.contextPath + "/attached/"
